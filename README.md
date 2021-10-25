@@ -15,6 +15,16 @@ A regular expression (shortened as regex or regexp; also referred to as rational
 
 ```python
 def log_to_data_frame(file: str, regex: str, columns: list) -> pd.DataFrame:
+      """Generate a DataFrame object from the provided log file.
+
+    Args:
+        file (str): Log file location.
+        regex (str): Regular expression
+        columns (list): DataFrame Columns
+
+    Returns:
+        pd.DataFrame: DataFrame object
+    """
     df = pd.DataFrame(columns=columns)
 
     with open(file, mode='r', encoding='utf8', newline='') as log:
